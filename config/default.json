@@ -1,0 +1,8 @@
+{
+  "tables": {
+    "users": {
+      "tableName": "Users-development",
+      "region": "eu-central-1"
+    }
+  }
+}
