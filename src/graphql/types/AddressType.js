@@ -7,12 +7,14 @@ import LocationType from './LocationType';
 
 export default new GraphQLObjectType({
   name: 'Address',
-  fields: () => ({
-    formatted: {
-      type: new GraphQLNonNull(GraphQLString),
-    },
-    location: {
-      type: new GraphQLNonNull(LocationType),
-    },
-  }),
+  fields: () => {
+    return {
+      formatted: {
+        type: new GraphQLNonNull(GraphQLString),
+      },
+      location: {
+        type: new GraphQLNonNull(LocationType),
+      },
+    };
+  },
 });

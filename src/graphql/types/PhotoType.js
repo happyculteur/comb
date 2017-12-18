@@ -6,12 +6,14 @@ import {
 
 export default new GraphQLObjectType({
   name: 'Photo',
-  fields: () => ({
-    id: {
-      type: new GraphQLNonNull(GraphQLString),
-    },
-    arn: {
-      type: new GraphQLNonNull(GraphQLString),
-    },
-  }),
+  fields: () => {
+    return {
+      id: {
+        type: new GraphQLNonNull(GraphQLString),
+      },
+      arn: {
+        type: new GraphQLNonNull(GraphQLString),
+      },
+    };
+  },
 });

@@ -12,33 +12,35 @@ import SpaceOwnerType from './SpaceOwnerType';
 
 export default new GraphQLObjectType({
   name: 'BeekeeperParams',
-  fields: () => ({
-    category: {
-      type: BeekeeperCategoryType,
-    },
-    experience: {
-      type: UserExperienceType,
-    },
-    hiveCount: {
-      type: GraphQLInt,
-    },
-    interests: {
-      type: new GraphQLList(BeekeeperInterestType),
-    },
-    searchedSpaces: {
-      type: new GraphQLList(SpaceType),
-    },
-    searchedSpacesOwnerTypes: {
-      type: new GraphQLList(SpaceOwnerType),
-    },
-    studentTypes: {
-      type: new GraphQLList(UserExperienceType),
-    },
-    formationCost: {
-      type: GraphQLInt,
-    },
-    formationAddress: {
-      type: AddressType,
-    },
-  }),
+  fields: () => {
+    return {
+      category: {
+        type: BeekeeperCategoryType,
+      },
+      experience: {
+        type: UserExperienceType,
+      },
+      hiveCount: {
+        type: GraphQLInt,
+      },
+      interests: {
+        type: new GraphQLList(BeekeeperInterestType),
+      },
+      searchedSpaces: {
+        type: new GraphQLList(SpaceType),
+      },
+      searchedSpacesOwnerTypes: {
+        type: new GraphQLList(SpaceOwnerType),
+      },
+      studentTypes: {
+        type: new GraphQLList(UserExperienceType),
+      },
+      formationCost: {
+        type: GraphQLInt,
+      },
+      formationAddress: {
+        type: AddressType,
+      },
+    };
+  },
 });

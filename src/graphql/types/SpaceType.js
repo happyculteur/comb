@@ -9,21 +9,23 @@ import PhotoType from './PhotoType';
 
 export default new GraphQLObjectType({
   name: 'Space',
-  fields: () => ({
-    address: {
-      type: AddressType,
-    },
-    description: {
-      type: GraphQLString,
-    },
-    size: {
-      type: GraphQLInt,
-    },
-    category: {
-      type: SpaceCategoryType,
-    },
-    photo: {
-      type: PhotoType,
-    },
-  }),
+  fields: () => {
+    return {
+      address: {
+        type: AddressType,
+      },
+      description: {
+        type: GraphQLString,
+      },
+      size: {
+        type: GraphQLInt,
+      },
+      category: {
+        type: SpaceCategoryType,
+      },
+      photo: {
+        type: PhotoType,
+      },
+    };
+  },
 });

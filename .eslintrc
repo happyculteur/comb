@@ -3,13 +3,14 @@
   "extends": "airbnb-base",
   "env": {
     "node": true,
-    "mocha": true,
+    "jest": true,
     "es6": true
   },
   "rules": {
     "arrow-body-style": [
       "error",
-      "never"
-    ]
+      "always"
+    ],
+    "import/prefer-default-export": 0
   }
 }

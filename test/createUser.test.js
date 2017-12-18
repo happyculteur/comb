@@ -2,9 +2,11 @@ import request from 'supertest';
 import server, { app } from '../src/app';
 
 describe('createUser mutation', () => {
-  afterAll(() => new Promise((resolve) => {
-    server.close(resolve);
-  }));
+  afterAll(() => {
+    return new Promise((resolve) => {
+      server.close(resolve);
+    });
+  });
 
   test('creates an user', async () => {
     const query = `
@@ -42,7 +44,7 @@ describe('createUser mutation', () => {
         },
       },
     };
-    const { body } = await request(app)
+    const { body } = await request(app) // eslint-disable-line
       .post('/graphql')
       .send({
         query,
@@ -50,5 +52,6 @@ describe('createUser mutation', () => {
       })
       .set('Accept', 'application/json')
       .expect(200);
+    // expect(body)
   });
 });

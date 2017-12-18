@@ -9,21 +9,23 @@ import PhotoInputType from './PhotoInputType';
 
 export default new GraphQLInputObjectType({
   name: 'SpaceInput',
-  fields: () => ({
-    address: {
-      type: AddressInputType,
-    },
-    description: {
-      type: GraphQLString,
-    },
-    size: {
-      type: GraphQLInt,
-    },
-    category: {
-      type: SpaceCategoryType,
-    },
-    photo: {
-      type: PhotoInputType,
-    },
-  }),
+  fields: () => {
+    return {
+      address: {
+        type: AddressInputType,
+      },
+      description: {
+        type: GraphQLString,
+      },
+      size: {
+        type: GraphQLInt,
+      },
+      category: {
+        type: SpaceCategoryType,
+      },
+      photo: {
+        type: PhotoInputType,
+      },
+    };
+  },
 });

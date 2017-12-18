@@ -7,24 +7,26 @@ import SpaceInputType from './SpaceInputType';
 
 export default new GraphQLInputObjectType({
   name: 'IndividualParamsInput',
-  fields: () => ({
-    wantsToInstallByHimself: {
-      type: GraphQLBoolean,
-    },
-    wantsToInstallByBeekeeper: {
-      type: GraphQLBoolean,
-    },
-    wantsToLearn: {
-      type: GraphQLBoolean,
-    },
-    experience: {
-      type: UserExperienceType,
-    },
-    hasSpace: {
-      type: GraphQLBoolean,
-    },
-    space: {
-      type: SpaceInputType,
-    },
-  }),
+  fields: () => {
+    return {
+      wantsToInstallByHimself: {
+        type: GraphQLBoolean,
+      },
+      wantsToInstallByBeekeeper: {
+        type: GraphQLBoolean,
+      },
+      wantsToLearn: {
+        type: GraphQLBoolean,
+      },
+      experience: {
+        type: UserExperienceType,
+      },
+      hasSpace: {
+        type: GraphQLBoolean,
+      },
+      space: {
+        type: SpaceInputType,
+      },
+    };
+  },
 });

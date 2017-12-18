@@ -7,12 +7,14 @@ import LocationInputType from './LocationInputType';
 
 export default new GraphQLInputObjectType({
   name: 'AddressInput',
-  fields: () => ({
-    formatted: {
-      type: new GraphQLNonNull(GraphQLString),
-    },
-    location: {
-      type: new GraphQLNonNull(LocationInputType),
-    },
-  }),
+  fields: () => {
+    return {
+      formatted: {
+        type: new GraphQLNonNull(GraphQLString),
+      },
+      location: {
+        type: new GraphQLNonNull(LocationInputType),
+      },
+    };
+  },
 });
