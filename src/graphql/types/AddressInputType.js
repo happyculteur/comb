@@ -3,7 +3,7 @@ import {
   GraphQLString,
   GraphQLNonNull,
 } from 'graphql';
-import LocationInputType from './LocationInputType';
+// import LocationInputType from './LocationInputType';
 
 export default new GraphQLInputObjectType({
   name: 'AddressInput',
@@ -12,9 +12,9 @@ export default new GraphQLInputObjectType({
       formatted: {
         type: new GraphQLNonNull(GraphQLString),
       },
-      location: {
-        type: new GraphQLNonNull(LocationInputType),
-      },
+      // location: {
+      //   type: new GraphQLNonNull(LocationInputType),
+      // },
     };
   },
 });

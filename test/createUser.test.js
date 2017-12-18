@@ -19,10 +19,6 @@ describe('createUser mutation', () => {
         phone
         address {
           formatted
-          location {
-            latitude
-            longitude
-          }
         }
         category
       }
@@ -37,10 +33,10 @@ describe('createUser mutation', () => {
         category: 'INDIVIDUAL',
         address: {
           formatted: '1 rue des Bees',
-          location: {
-            latitude: 1,
-            longitude: 2,
-          },
+          // location: {
+          //   latitude: 1,
+          //   longitude: 2,
+          // },
         },
       },
     };

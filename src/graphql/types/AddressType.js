@@ -3,7 +3,7 @@ import {
   GraphQLString,
   GraphQLNonNull,
 } from 'graphql';
-import LocationType from './LocationType';
+// import LocationType from './LocationType';
 
 export default new GraphQLObjectType({
   name: 'Address',
@@ -12,9 +12,9 @@ export default new GraphQLObjectType({
       formatted: {
         type: new GraphQLNonNull(GraphQLString),
       },
-      location: {
-        type: new GraphQLNonNull(LocationType),
-      },
+      // location: {
+      //   type: new GraphQLNonNull(LocationType),
+      // },
     };
   },
 });
