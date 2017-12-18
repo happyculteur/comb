@@ -1,35 +1,18 @@
 import {
-  GraphQLInputObjectType,
-  GraphQLString,
+  GraphQLObjectType,
   GraphQLInt,
   GraphQLList,
-  GraphQLNonNull,
 } from 'graphql';
-import AddressInputType from './AddressInputType';
+import AddressType from './AddressType';
 import BeekeeperCategoryType from './BeekeeperCategoryType';
 import UserExperienceType from './UserExperienceType';
 import BeekeeperInterestType from './BeekeeperInterestType';
-import SpaceInputType from './SpaceInputType';
+import SpaceType from './SpaceType';
 import SpaceOwnerType from './SpaceOwnerType';
 
-export default new GraphQLInputObjectType({
-  name: 'BeekeeperInput',
+export default new GraphQLObjectType({
+  name: 'BeekeeperParams',
   fields: () => ({
-    firstName: {
-      type: new GraphQLNonNull(GraphQLString),
-    },
-    lastName: {
-      type: new GraphQLNonNull(GraphQLString),
-    },
-    email: {
-      type: new GraphQLNonNull(GraphQLString),
-    },
-    phone: {
-      type: new GraphQLNonNull(GraphQLString),
-    },
-    address: {
-      type: new GraphQLNonNull(AddressInputType),
-    },
     category: {
       type: BeekeeperCategoryType,
     },
@@ -40,10 +23,10 @@ export default new GraphQLInputObjectType({
       type: GraphQLInt,
     },
     interests: {
-      type: BeekeeperInterestType,
+      type: new GraphQLList(BeekeeperInterestType),
     },
     searchedSpaces: {
-      type: new GraphQLList(SpaceInputType),
+      type: new GraphQLList(SpaceType),
     },
     searchedSpacesOwnerTypes: {
       type: new GraphQLList(SpaceOwnerType),
@@ -55,7 +38,7 @@ export default new GraphQLInputObjectType({
       type: GraphQLInt,
     },
     formationAddress: {
-      type: AddressInputType,
+      type: AddressType,
     },
   }),
 });

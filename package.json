@@ -2,7 +2,7 @@
   "scripts": {
     "start": "AWS_PROFILE=happyculteur babel-watch src/app",
     "build": "babel src/ --out-dir dist",
-    "test": "jest --testEnvironment=node"
+    "test": "AWS_PROFILE=happyculteur jest --testEnvironment=node"
   },
   "dependencies": {
     "aws-sdk": "^2.171.0",

@@ -9,7 +9,6 @@ function getDynamodb(region) {
 }
 
 export function putItem(data, params) {
-  console.log(data, params);
   const dynamodb = getDynamodb(params.region);
   return dynamodb.putItem({
     TableName: params.tableName,
@@ -22,11 +21,21 @@ export async function getItem(id, params) {
   const result = await dynamodb.getItem({
     TableName: params.tableName,
     Key: marshaler.marshalItem({
-      [params.key || 'id']: id,
+      [params.key]: id,
     }),
   }).promise();
   if (!(result && result.Item)) {
     return null;
   }
   return marshaler.unmarshalItem(result.Item);
+}
+
+export function deleteItem(id, params) {
+  const dynamodb = getDynamodb(params.region);
+  return dynamodb.deleteItem({
+    TableName: params.tableName,
+    Key: marshaler.marshalItem({
+      [params.key]: id,
+    }),
+  }).promise();
 }

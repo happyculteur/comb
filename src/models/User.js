@@ -5,7 +5,7 @@ import {
   generateId,
 } from './utils';
 
-class User {
+export default class User {
   constructor(data) {
     this.data = data;
     if (!this.data.id) {
@@ -20,14 +20,25 @@ class User {
       region: config.get('tables.users.region'),
     });
   }
-  static getByID(id) {
-    return dynamodb.getItem(id, {
+  remove() {
+    return User.removeById(this.data.id);
+  }
+  static removeById(id) {
+    return dynamodb.deleteItem(id, {
+      key: 'id',
       tableName: config.get('tables.users.tableName'),
       region: config.get('tables.users.region'),
     });
   }
-}
-
-export default class Beekeeper extends User {
-
+  static getById(id) {
+    const item = dynamodb.getItem(id, {
+      key: 'id',
+      tableName: config.get('tables.users.tableName'),
+      region: config.get('tables.users.region'),
+    });
+    if (!item) {
+      return null;
+    }
+    return new User(item);
+  }
 }

@@ -1,5 +1,5 @@
-import registerBeekeeperMutation from './registerBeekeeperMutation';
+import createUserMutation from './createUserMutation';
 
 export default {
-  registerBeekeeper: registerBeekeeperMutation,
+  createUser: createUserMutation,
 };

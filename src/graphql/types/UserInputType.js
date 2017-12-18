@@ -1,19 +1,16 @@
 import {
-  GraphQLObjectType,
+  GraphQLInputObjectType,
   GraphQLString,
   GraphQLNonNull,
 } from 'graphql';
-import AddressType from './AddressType';
-import BeekeeperParamsType from './BeekeeperParamsType';
-import IndividualParamsType from './IndividualParamsType';
+import AddressInputType from './AddressInputType';
+import BeekeeperParamsInputType from './BeekeeperParamsInputType';
+import IndividualParamsInputType from './IndividualParamsInputType';
 import UserCategoryType from './UserCategoryType';
 
-export default new GraphQLObjectType({
-  name: 'User',
+export default new GraphQLInputObjectType({
+  name: 'UserInput',
   fields: () => ({
-    id: {
-      type: new GraphQLNonNull(GraphQLString),
-    },
     firstName: {
       type: new GraphQLNonNull(GraphQLString),
     },
@@ -27,16 +24,16 @@ export default new GraphQLObjectType({
       type: new GraphQLNonNull(GraphQLString),
     },
     address: {
-      type: new GraphQLNonNull(AddressType),
+      type: new GraphQLNonNull(AddressInputType),
     },
     category: {
       type: new GraphQLNonNull(UserCategoryType),
     },
     beekeeperParams: {
-      type: BeekeeperParamsType,
+      type: BeekeeperParamsInputType,
     },
     individualParams: {
-      type: IndividualParamsType,
+      type: IndividualParamsInputType,
     },
   }),
 });
