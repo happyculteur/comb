@@ -1,8 +1,9 @@
 {
   "scripts": {
     "eslint": "eslint ./src ./test --ignore-path .gitignore",
-    "start": "AWS_PROFILE=happyculteur babel-watch src/app",
-    "build": "babel src/ --out-dir dist",
+    "start:dev": "AWS_PROFILE=happyculteur babel-watch src/app",
+    "start": "node build/app",
+    "build": "babel src/ --out-dir build",
     "pretest": "npm run eslint",
     "test": "AWS_PROFILE=happyculteur jest --testEnvironment=node"
   },

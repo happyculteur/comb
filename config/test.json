@@ -1,0 +1,11 @@
+{
+  "server": {
+    "port": 4000
+  },
+  "tables": {
+    "users": {
+      "tableName": "Users-test",
+      "region": "eu-central-1"
+    }
+  }
+}
