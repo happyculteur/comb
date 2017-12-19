@@ -12,6 +12,7 @@
     "aws-sdk": "^2.171.0",
     "body-parser": "^1.18.2",
     "config": "^1.28.1",
+    "cors": "^2.8.4",
     "dynamodb-marshaler": "^2.0.0",
     "express": "^4.16.2",
     "graphql": "^0.12.3",
