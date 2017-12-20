@@ -4,8 +4,8 @@ import {
   GraphQLNonNull,
 } from 'graphql';
 import AddressInputType from './AddressInputType';
-import BeekeeperParamsInputType from './BeekeeperParamsInputType';
-import IndividualParamsInputType from './IndividualParamsInputType';
+import BeekeeperInputType from './BeekeeperInputType';
+import IndividualInputType from './IndividualInputType';
 import UserCategoryType from './UserCategoryType';
 
 export default new GraphQLInputObjectType({
@@ -30,11 +30,11 @@ export default new GraphQLInputObjectType({
       category: {
         type: new GraphQLNonNull(UserCategoryType),
       },
-      beekeeperParams: {
-        type: BeekeeperParamsInputType,
+      beekeeper: {
+        type: BeekeeperInputType,
       },
-      individualParams: {
-        type: IndividualParamsInputType,
+      individual: {
+        type: IndividualInputType,
       },
     };
   },

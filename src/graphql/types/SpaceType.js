@@ -23,9 +23,9 @@ export default new GraphQLObjectType({
       category: {
         type: SpaceCategoryType,
       },
-      photo: {
-        type: PhotoType,
-      },
+      // photo: {
+      //   type: PhotoType,
+      // },
     };
   },
 });

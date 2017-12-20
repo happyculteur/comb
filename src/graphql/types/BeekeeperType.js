@@ -2,23 +2,25 @@ import {
   GraphQLObjectType,
   GraphQLInt,
   GraphQLList,
+  GraphQLBoolean,
 } from 'graphql';
 import AddressType from './AddressType';
 import BeekeeperCategoryType from './BeekeeperCategoryType';
-import UserExperienceType from './UserExperienceType';
+import BeekeeperExperienceType from './BeekeeperExperienceType';
 import BeekeeperInterestType from './BeekeeperInterestType';
-import SpaceType from './SpaceType';
+import SpaceCategoryType from './SpaceCategoryType';
 import SpaceOwnerType from './SpaceOwnerType';
+import IndividualExperienceType from './IndividualExperienceType';
 
 export default new GraphQLObjectType({
-  name: 'BeekeeperParams',
+  name: 'Beekeeper',
   fields: () => {
     return {
       category: {
         type: BeekeeperCategoryType,
       },
       experience: {
-        type: UserExperienceType,
+        type: BeekeeperExperienceType,
       },
       hiveCount: {
         type: GraphQLInt,
@@ -27,16 +29,16 @@ export default new GraphQLObjectType({
         type: new GraphQLList(BeekeeperInterestType),
       },
       searchedSpaces: {
-        type: new GraphQLList(SpaceType),
+        type: new GraphQLList(SpaceCategoryType),
       },
-      searchedSpacesOwnerTypes: {
+      searchedSpacesOwner: {
         type: new GraphQLList(SpaceOwnerType),
       },
-      studentTypes: {
-        type: new GraphQLList(UserExperienceType),
+      searchedStudent: {
+        type: new GraphQLList(IndividualExperienceType),
       },
-      formationCost: {
-        type: GraphQLInt,
+      paidFormation: {
+        type: GraphQLBoolean,
       },
       formationAddress: {
         type: AddressType,

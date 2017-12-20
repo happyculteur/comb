@@ -23,9 +23,9 @@ export default new GraphQLInputObjectType({
       category: {
         type: SpaceCategoryType,
       },
-      photo: {
-        type: PhotoInputType,
-      },
+      // photo: {
+      //   type: PhotoInputType,
+      // },
     };
   },
 });

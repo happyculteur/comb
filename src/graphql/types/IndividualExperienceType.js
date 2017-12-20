@@ -3,19 +3,19 @@ import {
 } from 'graphql';
 
 export default new GraphQLEnumType({
-  name: 'UserExperience',
+  name: 'IndividualExperience',
   description: '',
   values: {
+    NONE: {
+      value: 'NONE',
+      description: '',
+    },
     BEGINNER: {
       value: 'BEGINNER',
       description: '',
     },
-    INTERMEDIATE: {
-      value: 'INTERMEDIATE',
-      description: '',
-    },
-    EXPERIENCED: {
-      value: 'EXPERIENCED',
+    TRAINED: {
+      value: 'TRAINED',
       description: '',
     },
   },

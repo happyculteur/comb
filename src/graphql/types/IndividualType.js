@@ -1,25 +1,21 @@
 import {
   GraphQLObjectType,
   GraphQLBoolean,
+  GraphQLList,
 } from 'graphql';
-import UserExperienceType from './UserExperienceType';
+import IndividualExperienceType from './IndividualExperienceType';
 import SpaceType from './SpaceType';
+import IndividualInterestType from './IndividualInterestType';
 
 export default new GraphQLObjectType({
-  name: 'IndividualParams',
+  name: 'Individual',
   fields: () => {
     return {
-      wantsToInstallByHimself: {
-        type: GraphQLBoolean,
-      },
-      wantsToInstallByBeekeeper: {
-        type: GraphQLBoolean,
-      },
-      wantsToLearn: {
-        type: GraphQLBoolean,
+      interests: {
+        type: new GraphQLList(IndividualInterestType),
       },
       experience: {
-        type: UserExperienceType,
+        type: IndividualExperienceType,
       },
       hasSpace: {
         type: GraphQLBoolean,
