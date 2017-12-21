@@ -6,11 +6,11 @@ export default new GraphQLEnumType({
   name: 'IndividualInterest',
   description: '',
   values: {
-    SPACES: {
+    INSTALL_BY_HIMSELF: {
       value: 'INSTALL_BY_HIMSELF',
       description: '',
     },
-    TEACH: {
+    INSTALL_BY_BEEKEEPER: {
       value: 'INSTALL_BY_BEEKEEPER',
       description: '',
     },
