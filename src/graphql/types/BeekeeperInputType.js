@@ -26,7 +26,7 @@ export default new GraphQLInputObjectType({
         type: GraphQLString,
       },
       interests: {
-        type: BeekeeperInterestType,
+        type: new GraphQLList(BeekeeperInterestType),
       },
       searchedSpaces: {
         type: new GraphQLList(SpaceCategoryType),
