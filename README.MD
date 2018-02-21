@@ -22,9 +22,13 @@
 * Also husky is setted and will run somme cmd on merge, rebase and pre-commit check package.json for info
 
 ## TODO
- * Save to DynamoDb
- * Set Test
- * Make things work with APP!
+ * [ ] Switch to yarn
+ * [ ] ReShape archi
+ * [ ] Fix dependency version, no '^'!
+ * [ ] Set prettier.io config
+ * [ ] Save to DynamoDb
+ * [ ] Set Test
+ * [ ] Make things work with APP!
 
 ## /!\ WARNING /!\
 Before adding any libs, you must check that the type exist.
