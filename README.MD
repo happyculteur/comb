@@ -23,7 +23,7 @@
 
 ## TODO
  * [ ] Switch to yarn
- * [ ] ReShape archi
+ * [X] ReShape archi
  * [ ] Fix dependency version, no '^'!
  * [ ] Set prettier.io config
  * [ ] Save to DynamoDb
@@ -31,9 +31,11 @@
  * [ ] Make things work with APP!
 
 ## /!\ WARNING /!\
-Before adding any libs, you must check that the type exist.
-Else contribute to https://github.com/DefinitelyTyped/DefinitelyTyped project.
-Or forgot using this lib.
+> Before adding any libs, you must check that the type exist.
+
+> Else contribute to https://github.com/DefinitelyTyped/DefinitelyTyped project.
+
+> Or forgot using this lib.
 
 ## Doc followed to bootstrap:
 https://blog.shovonhasan.com/deploying-a-typescript-node-aws-lambda-function-with-serverless/

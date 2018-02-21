@@ -3,9 +3,9 @@ import {
   Response
 } from "express";
 import { dynamoDb } from "../../../config/dynamoDb";
-import { IUser } from "../type";
+import { IUser } from "../types";
 
-const post: (req: Request, res: Response) => void
+export const post: (req: Request, res: Response) => void
 = (req, res) => {
 
   const user: IUser = req.body;
@@ -27,5 +27,3 @@ const post: (req: Request, res: Response) => void
     // res.json({ user.properties });
   });
 };
-
-export default post;
