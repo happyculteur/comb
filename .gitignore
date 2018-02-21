@@ -1,0 +1,12 @@
+# package directories
+node_modules
+
+# Serverless directories
+.serverless
+
+# Build directories
+.build
+build
+
+# Environment variable
+.env
