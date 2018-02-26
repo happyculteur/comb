@@ -1,13 +1,8 @@
-import {
-  Request,
-  Response
-} from "express";
+import { Request, Response } from "express";
 import { dynamoDb } from "../../../config/dynamoDb";
 import { IUser } from "../types";
 
-export const post: (req: Request, res: Response) => void
-= (req, res) => {
-
+export const post: (req: Request, res: Response) => void = (req, res) => {
   const user: IUser = req.body;
 
   const params = {
@@ -18,11 +13,9 @@ export const post: (req: Request, res: Response) => void
     TableRegion: process.env.DYNAMODB_TABLE_USER_REGION as string
   };
 
-  return dynamoDb.put(params, (error) => {
+  return dynamoDb.put(params, error => {
     if (error) {
-      res
-        .status(400)
-        .json({ error: "Could not create user" });
+      res.status(400).json({ error: "Could not create user" });
     }
     // res.json({ user.properties });
   });

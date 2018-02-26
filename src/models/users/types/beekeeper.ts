@@ -1,9 +1,4 @@
-import {
-  IAddress,
-  IndividualExperience,
-  SpaceCategory,
-  SpaceOwner
-} from "./";
+import { IAddress, IndividualExperience, SpaceCategory, SpaceOwner } from "./";
 
 export interface IBeekeeper {
   category: BeekeeperCategory;
@@ -18,19 +13,19 @@ export interface IBeekeeper {
 }
 
 enum BeekeeperCategory {
-    AMATEUR = "AMATEUR",
-    PROFESSIONAL = "PROFESSIONAL"
+  AMATEUR = "AMATEUR",
+  PROFESSIONAL = "PROFESSIONAL"
 }
 
 enum BeekeeperExperience {
-    BEGINNER = "BEGINNER",
-    INTERMEDIATE = "INTERMEDIATE",
-    EXPERIENCED = "EXPERIENCED"
+  BEGINNER = "BEGINNER",
+  INTERMEDIATE = "INTERMEDIATE",
+  EXPERIENCED = "EXPERIENCED"
 }
 
 enum BeekeeperInterrest {
-    SPACES = "SPACES",
-    TEACH = "TEACH",
-    LEARN = "LEARN",
-    SELL = "SELL"
+  SPACES = "SPACES",
+  TEACH = "TEACH",
+  LEARN = "LEARN",
+  SELL = "SELL"
 }

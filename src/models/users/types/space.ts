@@ -8,14 +8,14 @@ export interface ISpace {
 }
 
 export enum SpaceOwner {
-    INDIVUAL = "INDIVIDUAL",
-    COMPANY = "COMPANY"
+  INDIVUAL = "INDIVIDUAL",
+  COMPANY = "COMPANY"
 }
 
 export enum SpaceCategory {
-    GARDEN = "GARDEN",
-    BALCONY = "BALCONY",
-    TERRACE = "TERRACE",
-    ROOF = "ROOF",
-    OTHER = "OTHER"
+  GARDEN = "GARDEN",
+  BALCONY = "BALCONY",
+  TERRACE = "TERRACE",
+  ROOF = "ROOF",
+  OTHER = "OTHER"
 }
