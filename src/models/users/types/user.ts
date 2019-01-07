@@ -1,4 +1,4 @@
-import { IAddress, IBeekeeper, IIndividual } from "./";
+import { IAddress } from "./";
 
 export interface IUser {
   id: number;
@@ -7,9 +7,7 @@ export interface IUser {
   email: string;
   phone: string;
   adress: IAddress;
-  category: UserCategory;
-  beekeeper: IBeekeeper;
-  Individual: IIndividual;
+  userType: UserCategory;
 }
 
 enum UserCategory {

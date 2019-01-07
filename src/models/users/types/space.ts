@@ -3,7 +3,7 @@ import { IAddress } from "./";
 export interface ISpace {
   address: IAddress;
   description: string;
-  ize: number;
+  size: number;
   category: SpaceCategory;
 }
 

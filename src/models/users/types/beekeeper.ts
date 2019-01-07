@@ -1,20 +1,21 @@
-import { IAddress, IndividualExperience, SpaceCategory, SpaceOwner } from "./";
+import {
+  IAddress,
+  IndividualExperience,
+  SpaceCategory,
+  SpaceOwner,
+  IUser
+} from "./";
 
-export interface IBeekeeper {
-  category: BeekeeperCategory;
+export interface IBeekeeper extends IUser {
+  isAProfesionnal: boolean;
   experience: BeekeeperExperience;
   hiveCount: number;
   interests: Array<BeekeeperInterrest>;
   searchedSpace: SpaceCategory;
   searchedSpaceOwner: SpaceOwner;
-  searchedStudent: IndividualExperience;
-  paidFormation: boolean;
+  formationLevel: IndividualExperience;
+  isFormationFree: boolean;
   formationAddress: IAddress;
-}
-
-enum BeekeeperCategory {
-  AMATEUR = "AMATEUR",
-  PROFESSIONAL = "PROFESSIONAL"
 }
 
 enum BeekeeperExperience {
@@ -24,7 +25,7 @@ enum BeekeeperExperience {
 }
 
 enum BeekeeperInterrest {
-  SPACES = "SPACES",
+  INSTALL = "INSTALL",
   TEACH = "TEACH",
   LEARN = "LEARN",
   SELL = "SELL"

@@ -6,6 +6,7 @@
   ],
   "jsRules": {},
   "rules": {
+    "ordered-imports": "false",
     "no-any": true,
     "no-empty-interface": true,
     "no-internal-module": true,
@@ -23,7 +24,6 @@
     "no-null-keyword": true,
     "no-this-assignment": true,
     "no-unused-expression": true,
-    "no-unused-variable": true,
     "no-var-keyword": true,
     "prefer-object-spread": true,
     "triple-equals": true,
