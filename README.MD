@@ -1,4 +1,12 @@
-# Nodejs Express API with TS working with serverless
+# [HappyCulteur](https://www.happyculteur.co/) &middot; COMB &middot; ![Twitter Follow](https://img.shields.io/twitter/follow/happyculteur_.svg?style=social&label=Follow)
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/happyculteur/comb/blob/master/LICENSE.md)
+[![Coverage Status](https://coveralls.io/repos/github/happyculteur/comb/badge.svg?branch=master)](https://coveralls.io/github/happyculteur/comb?branch=master)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/5abf1e5b493140b79797ccc307fe9b3c)](https://www.codacy.com/app/happyculteur/comb?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=happyculteur/comb&amp;utm_campaign=Badge_Grade)
+<a href="https://david-dm.org/happyculteur/comb"><img src="https://david-dm.org/happyculteur/comb.svg" alt="Dependency Status"></a>
+<a href="https://david-dm.org/happyculteur/comb/?type=dev"><img src="https://david-dm.org/happyculteur/comb/dev-status.svg" alt="devDependency Status"></a>
+[![Known Vulnerabilities](https://snyk.io/test/github/happyculteur/comb/badge.svg)](https://snyk.io/test/github/happyculteur/comb)
+[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
+[![BCH compliance](https://bettercodehub.com/edge/badge/happyculteur/comb?branch=master)](https://bettercodehub.com/)
 
 ## First things to do
   * get Linux or MINGW !
