@@ -1,4 +1,4 @@
-# [HappyCulteur](https://www.happyculteur.co/) &middot; COMB &middot; ![Twitter Follow](https://img.shields.io/twitter/follow/happyculteur_.svg?style=social&label=Follow)
+# [Happyculteur](https://www.happyculteur.co/) &middot; COMB &middot; ![Twitter Follow](https://img.shields.io/twitter/follow/happyculteur_.svg?style=social&label=Follow)
 [![GitHub license](https://img.shields.io/badge/license-AGPL%20v3-blue.svg)](https://github.com/happyculteur/comb/blob/master/LICENSE.md)
 [![Coverage Status](https://coveralls.io/repos/github/happyculteur/comb/badge.svg?branch=master)](https://coveralls.io/github/happyculteur/comb?branch=master)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/5abf1e5b493140b79797ccc307fe9b3c)](https://www.codacy.com/app/happyculteur/comb?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=happyculteur/comb&amp;utm_campaign=Badge_Grade)
